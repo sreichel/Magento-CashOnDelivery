@@ -24,7 +24,7 @@
  */
 class Phoenix_CashOnDelivery_Block_Checkout_Cod extends Mage_Checkout_Block_Total_Default
 {
-    protected $_template = 'phoenix/cashondelivery/checkout/cod.phtml';
+    protected $_template = 'phoenix_cashondelivery/checkout/cod.phtml';
 
     /**
      * Check if we need display COD fee include and exlude tax

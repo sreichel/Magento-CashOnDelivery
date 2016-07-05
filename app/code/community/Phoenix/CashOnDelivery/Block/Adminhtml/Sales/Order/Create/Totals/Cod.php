@@ -29,7 +29,7 @@ class Phoenix_CashOnDelivery_Block_Adminhtml_Sales_Order_Create_Totals_Cod exten
      *
      * @var string
      */
-    protected $_template = 'phoenix/cashondelivery/sales/order/create/totals/cod.phtml';
+    protected $_template = 'phoenix_cashondelivery/sales/order/create/totals/cod.phtml';
 
     /**
      * Variable to lazy load the helper.

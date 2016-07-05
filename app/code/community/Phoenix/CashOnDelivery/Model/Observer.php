@@ -78,7 +78,7 @@ class Phoenix_CashOnDelivery_Model_Observer extends Mage_Core_Model_Abstract
      * Performs order_create_loadBlock response update
      * adds totals block to each response
      * This function is deprecated, the totals block update is implemented
-     * in phoenix/cashondelivery/sales.js (SalesOrder class extension)
+     * in phoenix_cashondelivery/sales.js (SalesOrder class extension)
      * 
      * @param Varien_Event_Observer $observer
      * @return Phoenix_CashOnDelivery_Model_Observer

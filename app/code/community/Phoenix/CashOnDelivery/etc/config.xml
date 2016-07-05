@@ -201,7 +201,7 @@
         <layout>
             <updates>
                 <phoenix_cashondelivery>
-                    <file>phoenix/cashondelivery.xml</file>
+                    <file>phoenix_cashondelivery.xml</file>
                 </phoenix_cashondelivery>
             </updates>
         </layout>
@@ -211,7 +211,7 @@
         <layout>
             <updates>
                 <phoenix_cashondelivery>
-                    <file>phoenix/cashondelivery.xml</file>
+                    <file>phoenix_cashondelivery.xml</file>
                 </phoenix_cashondelivery>
             </updates>
         </layout>

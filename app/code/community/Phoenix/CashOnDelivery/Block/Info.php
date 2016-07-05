@@ -28,12 +28,12 @@ class Phoenix_CashOnDelivery_Block_Info extends Mage_Payment_Block_Info
     protected function _construct()
     {
         parent::_construct();
-        $this->setTemplate('phoenix/cashondelivery/info.phtml');
+        $this->setTemplate('phoenix_cashondelivery/info.phtml');
     }
 
     public function toPdf()
     {
-        $this->setTemplate('phoenix/cashondelivery/pdf/info.phtml');
+        $this->setTemplate('phoenix_cashondelivery/pdf/info.phtml');
         return $this->toHtml();
     }
 

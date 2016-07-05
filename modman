@@ -1,8 +1,8 @@
 app/code/community/Phoenix/CashOnDelivery                               app/code/community/Phoenix/CashOnDelivery
-app/design/adminhtml/default/default/layout/phoenix/*                   app/design/adminhtml/default/default/layout/phoenix/
-app/design/adminhtml/default/default/template/phoenix/cashondelivery    app/design/adminhtml/default/default/template/phoenix/cashondelivery
-app/design/frontend/base/default/layout/phoenix/*                       app/design/frontend/base/default/layout/phoenix/
-app/design/frontend/base/default/template/phoenix/cashondelivery        app/design/frontend/base/default/template/phoenix/cashondelivery
+app/design/adminhtml/default/default/layout/*                           app/design/adminhtml/default/default/layout/
+app/design/adminhtml/default/default/template/phoenix_cashondelivery    app/design/adminhtml/default/default/template/phoenix_cashondelivery
+app/design/frontend/base/default/layout/*                               app/design/frontend/base/default/layout/
+app/design/frontend/base/default/template/phoenix_cashondelivery        app/design/frontend/base/default/template/phoenix_cashondelivery
 app/etc/modules/*                                                       app/etc/modules/
 app/locale/de_DE/*                                                      app/locale/de_DE/
 app/locale/el_GR/*                                                      app/locale/el_GR/
@@ -11,4 +11,4 @@ app/locale/es_ES/*                                                      app/loca
 app/locale/it_IT/*                                                      app/locale/it_IT/
 app/locale/nb_NO/*                                                      app/locale/nb_NO/
 app/locale/pl_PL/*                                                      app/locale/pl_PL/
-js/phoenix/cashondelivery/*                                             js/phoenix/cashondelivery/
+js/phoenix_cashondelivery                                               js/phoenix_cashondelivery

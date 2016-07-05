@@ -65,7 +65,7 @@
 
     <adminhtml_sales_order_create_index>
         <reference name="head">
-            <action method="addJs"><file>phoenix/cashondelivery/sales.js</file></action>
+            <action method="addJs"><file>phoenix_cashondelivery/sales.js</file></action>
         </reference>
     </adminhtml_sales_order_create_index>
 

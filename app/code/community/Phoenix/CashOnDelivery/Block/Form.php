@@ -26,7 +26,7 @@ class Phoenix_CashOnDelivery_Block_Form extends Mage_Payment_Block_Form
      *
      * @var string
      */
-    protected $_template = 'phoenix/cashondelivery/form.phtml';
+    protected $_template = 'phoenix_cashondelivery/form.phtml';
 
     public function getQuote()
     {
