@@ -20,13 +20,14 @@
 
 class Phoenix_CashOnDelivery_Helper_Data extends Mage_Core_Helper_Data
 {
+    protected $_moduleName = 'Phoenix_CashOnDelivery';
+
     /**
      * Config path constants
      */
     const CONFIG_XML_PATH_COD_TAX_CLASS    = 'tax/classes/phoenix_cashondelivery_tax_class';
     const CONFIG_XML_PATH_COD_INCLUDES_TAX = 'tax/calculation/phoenix_cashondelivery_includes_tax';
     const CONFIG_XML_PATH_DISPLAY_COD      = 'tax/display/phoenix_cashondelivery_fee';
-
 
     /**
      * Instance variable for lazy load.

@@ -52,7 +52,6 @@ class Phoenix_CashOnDelivery_Model_Sales_Creditmemo_Total extends Mage_Sales_Mod
         $order->setBaseCodFeeRefunded($baseCodFeeRefunded + $baseCodFeeToRefund)
               ->setCodFeeRefunded($codFeeRefunded         + $codFeeToRefund);
 
-
         return $this;
     }
 }

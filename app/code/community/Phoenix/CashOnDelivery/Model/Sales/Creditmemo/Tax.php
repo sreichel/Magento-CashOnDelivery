@@ -56,7 +56,6 @@ class Phoenix_CashOnDelivery_Model_Sales_Creditmemo_Tax extends Mage_Sales_Model
         $order->setBaseCodTaxAmountRefunded($baseCodTaxAmountRefunded + $baseCodTaxAmountToRefund)
               ->setCodTaxAmountRefunded($codTaxAmountRefunded         + $codTaxAmountToRefund);
 
-
         return $this;
     }
 }

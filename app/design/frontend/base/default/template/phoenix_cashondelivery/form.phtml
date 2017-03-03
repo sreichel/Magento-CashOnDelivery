@@ -19,28 +19,28 @@
  */
 ?>
 <?php
-$_code		= $this->getMethodCode();
-$_extra_fee	= $this->getMethod()->getAddressCosts($this->getShippingAddress());
+$_code = $this->getMethodCode();
+$_extra_fee = $this->getMethod()->getAddressCosts($this->getShippingAddress());
 
 $_extra_fee_excl = $this->convertPrice(Mage::helper('phoenix_cashondelivery')->getCodPrice($_extra_fee, $this->helper('phoenix_cashondelivery')->displayCodFeeIncludingTax(), $this->getShippingAddress()), true);
 $_extra_fee_incl = $this->convertPrice(Mage::helper('phoenix_cashondelivery')->getCodPrice($_extra_fee, true, $this->getShippingAddress()), true);
 
 $_codFeeStr = $_extra_fee_excl;
 if ($this->helper('phoenix_cashondelivery')->displayCodBothPrices() && ($_extra_fee_incl != $_extra_fee_excl)) {
-	$_codFeeStr .= ' ('.$this->__('Incl. Tax').' '.$_extra_fee_incl.')';
+    $_codFeeStr .= ' ('.$this->__('Incl. Tax').' '.$_extra_fee_incl.')';
 }
 ?>
 <?php if($this->getMethod()->getCustomText() || $_extra_fee || Mage::getStoreConfig('payment/phoenix_cashondelivery/display_zero_fee')): ?>
 <fieldset class="form-list">
-	<ul id="payment_form_<?php echo $_code ?>" style="display:none;">
+    <ul id="payment_form_<?php echo $_code ?>" style="display:none;">
         <?php if($_extra_fee || Mage::getStoreConfig('payment/phoenix_cashondelivery/display_zero_fee')): ?>
-		<li><?php echo $this->__('You will be charged an extra fee of %s.', $_codFeeStr) ?></li>
+        <li><?php echo $this->__('You will be charged an extra fee of %s.', $_codFeeStr) ?></li>
         <?php endif; ?>
-		<?php if ($this->getMethod()->getCustomText()): ?>
-		<li>
-			<?php echo $this->getMethod()->getCustomText() ?>
-		</li>
-		<?php endif; ?>
-	</ul>
+        <?php if ($this->getMethod()->getCustomText()): ?>
+        <li>
+            <?php echo $this->getMethod()->getCustomText() ?>
+        </li>
+        <?php endif; ?>
+    </ul>
 </fieldset>
 <?php endif; ?>

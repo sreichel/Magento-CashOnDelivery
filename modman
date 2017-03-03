@@ -6,9 +6,11 @@ app/design/frontend/base/default/template/phoenix_cashondelivery        app/desi
 app/etc/modules/*                                                       app/etc/modules/
 app/locale/de_DE/*                                                      app/locale/de_DE/
 app/locale/el_GR/*                                                      app/locale/el_GR/
+app/locale/en_GB/*                                                      app/locale/en_GB/
 app/locale/en_US/*                                                      app/locale/en_US/
 app/locale/es_ES/*                                                      app/locale/es_ES/
 app/locale/it_IT/*                                                      app/locale/it_IT/
 app/locale/nb_NO/*                                                      app/locale/nb_NO/
 app/locale/pl_PL/*                                                      app/locale/pl_PL/
+app/locale/pl_PT/*                                                      app/locale/pl_PT/
 js/phoenix_cashondelivery                                               js/phoenix_cashondelivery
