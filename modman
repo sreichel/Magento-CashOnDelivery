@@ -12,5 +12,4 @@ app/locale/es_ES/*                                                      app/loca
 app/locale/it_IT/*                                                      app/locale/it_IT/
 app/locale/nb_NO/*                                                      app/locale/nb_NO/
 app/locale/pl_PL/*                                                      app/locale/pl_PL/
-app/locale/pl_PT/*                                                      app/locale/pl_PT/
 js/phoenix_cashondelivery                                               js/phoenix_cashondelivery
