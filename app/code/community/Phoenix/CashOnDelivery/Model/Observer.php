@@ -75,29 +75,6 @@ class Phoenix_CashOnDelivery_Model_Observer extends Mage_Core_Model_Abstract
     }
 
     /**
-     * Performs order_create_loadBlock response update
-     * adds totals block to each response
-     * This function is deprecated, the totals block update is implemented
-     * in phoenix_cashondelivery/sales.js (SalesOrder class extension)
-     *
-     * @param Varien_Event_Observer $observer
-     * @return Phoenix_CashOnDelivery_Model_Observer
-     */
-    public function controller_action_layout_load_before(Varien_Event_Observer $observer)
-    {
-        $action = $observer->getAction();
-
-        if ($action->getFullActionName() != 'adminhtml_sales_order_create_loadBlock' || !$action->getRequest()->getParam('json')) {
-            return $this;
-        }
-
-        $layout = $observer->getLayout();
-        $layout->getUpdate()->addHandle('adminhtml_sales_order_create_load_block_totals');
-
-        return $this;
-    }
-
-    /**
      * When the order gets canceled we put the Cash on Delivery fee and tax also in the canceled columns.
      *
      * @param Varien_Event_Observer $observer
