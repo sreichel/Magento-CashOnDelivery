@@ -51,7 +51,6 @@ class Phoenix_CashOnDelivery_Block_Totals_Abstract extends Mage_Core_Block_Abstr
             $code      = 'phoenix_cashondelivery_fee';
 
             if (Mage::helper('phoenix_cashondelivery')->displayCodBothPrices()) {
-
                 $label = $this->__('Cash on Delivery fee (Excl.Tax)');
 
                 $totalInclLabel     = $this->__('Cash on Delivery fee (Incl.Tax)');
@@ -60,7 +59,6 @@ class Phoenix_CashOnDelivery_Block_Totals_Abstract extends Mage_Core_Block_Abstr
                 $totalInclCode      = 'phoenix_cashondelivery_fee_incl';
 
             } elseif (Mage::helper('phoenix_cashondelivery')->displayCodFeeIncludingTax()) {
-
                 $value     = $this->_totalObject->getCodFee()     + $this->_totalObject->getCodTaxAmount();
                 $baseValue = $this->_totalObject->getBaseCodFee() + $this->_totalObject->getBaseCodTaxAmount();
             }

@@ -105,7 +105,6 @@ class Phoenix_CashOnDelivery_Helper_Data extends Mage_Core_Helper_Data
         $storeId = Mage::app()->getStore($store)->getId();
 
         if (!isset($this->_shippingPriceDisplayType[$storeId])) {
-
             $this->_shippingPriceDisplayType[$storeId] = (int)Mage::getStoreConfig(self::CONFIG_XML_PATH_DISPLAY_COD, $store);
         }
         return $this->_shippingPriceDisplayType[$storeId];
@@ -135,7 +134,6 @@ class Phoenix_CashOnDelivery_Helper_Data extends Mage_Core_Helper_Data
     public function getTotalAfterPosition()
     {
         if (!$this->_getTotalAfterPosition) {
-
             $config      = Mage::app()->getConfig()->getXpath('//sales/totals_sort');
             $positions   = end($config);
             $positions   = $positions->asArray();
@@ -144,7 +142,7 @@ class Phoenix_CashOnDelivery_Helper_Data extends Mage_Core_Helper_Data
 
             asort($positions);
 
-            while($val = current($positions)) {
+            while ($val = current($positions)) {
                 if ($val == $codPos) {
                     prev($positions);
                     $beforeTotal = key($positions);

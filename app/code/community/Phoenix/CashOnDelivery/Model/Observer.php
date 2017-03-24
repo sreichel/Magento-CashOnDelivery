@@ -26,8 +26,8 @@ class Phoenix_CashOnDelivery_Model_Observer extends Mage_Core_Model_Abstract
      * @param Varien_Event_Observer $observer
      * @return Phoenix_CashOnDelivery_Model_Observer
      */
-    public function sales_quote_collect_totals_after(Varien_Event_Observer $observer) 
-    {        
+    public function salesQuoteCollectTotalsAfter(Varien_Event_Observer $observer)
+    {
         $quote = $observer->getEvent()->getQuote();
         $data  = $observer->getInput();
 
@@ -47,12 +47,12 @@ class Phoenix_CashOnDelivery_Model_Observer extends Mage_Core_Model_Abstract
 
     /**
      * Adds codFee to order
-     * 
+     *
      * @param Varien_Event_Observer $observer
      * @return Phoenix_CashOnDelivery_Model_Observer
      */
-    public function sales_order_payment_place_end(Varien_Event_Observer $observer) 
-    {        
+    public function salesOrderPaymentPlaceEnd(Varien_Event_Observer $observer)
+    {
         $payment = $observer->getPayment();
         if ($payment->getMethodInstance()->getCode() != 'phoenix_cashondelivery') {
             return $this;
@@ -79,12 +79,12 @@ class Phoenix_CashOnDelivery_Model_Observer extends Mage_Core_Model_Abstract
      * adds totals block to each response
      * This function is deprecated, the totals block update is implemented
      * in phoenix_cashondelivery/sales.js (SalesOrder class extension)
-     * 
+     *
      * @param Varien_Event_Observer $observer
      * @return Phoenix_CashOnDelivery_Model_Observer
      */
-    public function controller_action_layout_load_before(Varien_Event_Observer $observer) 
-    {        
+    public function controller_action_layout_load_before(Varien_Event_Observer $observer)
+    {
         $action = $observer->getAction();
 
         if ($action->getFullActionName() != 'adminhtml_sales_order_create_loadBlock' || !$action->getRequest()->getParam('json')) {
@@ -103,7 +103,7 @@ class Phoenix_CashOnDelivery_Model_Observer extends Mage_Core_Model_Abstract
      * @param Varien_Event_Observer $observer
      * @return Phoenix_CashOnDelivery_Model_Observer
      */
-    public function order_cancel_after(Varien_Event_Observer $observer)
+    public function orderCancelAfter(Varien_Event_Observer $observer)
     {
         $order = $observer->getEvent()->getOrder();
 
@@ -147,15 +147,15 @@ class Phoenix_CashOnDelivery_Model_Observer extends Mage_Core_Model_Abstract
      * @param Varien_Event_Observer $observer
      * @return void
      */
-    public function invoice_cashondelivery($observer)
+    public function invoiceCashondelivery($observer)
     {
         // Get order
         $order = $observer->getEvent()->getOrder();
         
         // If order is instance of Phoenix_CashOnDelivery_Model_CashOnDelivery
-        if ($order->getPayment()->getMethodInstance()->getCode() == 'phoenix_cashondelivery' && 
+        if ($order->getPayment()->getMethodInstance()->getCode() == 'phoenix_cashondelivery' &&
             // Can be invoiced
-            $order->canvoice() && 
+            $order->canvoice() &&
             // order_invoice is true
             Mage::getStoreConfig('payment/phoenix_cashondelivery/order_invoice')) {
             // Prepare invoice

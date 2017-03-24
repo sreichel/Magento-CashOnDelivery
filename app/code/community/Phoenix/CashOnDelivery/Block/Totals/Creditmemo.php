@@ -34,5 +34,4 @@ class Phoenix_CashOnDelivery_Block_Totals_Creditmemo extends Phoenix_CashOnDeliv
 
         return $this;
     }
-
 }

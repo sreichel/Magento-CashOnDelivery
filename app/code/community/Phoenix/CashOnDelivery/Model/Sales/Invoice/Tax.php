@@ -35,7 +35,6 @@ class Phoenix_CashOnDelivery_Model_Sales_Invoice_Tax extends Mage_Sales_Model_Or
          * Check Cod amount in previus invoices
          */
         foreach ($order->getInvoiceCollection() as $previousInvoice) {
-
             if ($previousInvoice->getCodFee() && !$previousInvoice->isCanceled()) {
                 $includeCodTax = false;
             }
